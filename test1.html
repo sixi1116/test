@@ -1,0 +1,69 @@
+<!-- 1.改变html内容
+2.改变html图像（可以一直切换显示）if
+3.对事件的反映 button
+4.改变html样式（文本颜色）
+5.验证输入（未按邀请输入弹窗提示） -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>test1</title>
+        <script>
+            // 改变html内容
+            function myFuncTion()
+            {
+                document.getElementById("demo").innerHTML="hello world";
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            // 改变html图像（可以一直切换）
+             function changeImage()
+            {
+                element=document.getElementById("image")
+                if (element.src.match("b.png"))
+                {
+                    element.src="a.png"
+                }
+                else
+                {
+                    element.src="b.png"
+                }
+            }
+        </script>
+        <h1 id="title">这是标题</h1>
+        <img id="image" onclick="changeImage()" src="a.png" width="100" height="100">
+        <p id="demo">这是段落</p> 
+        <!-- 对事件的反映 -->
+        <button type="button" onclick="myFuncTion()">点击</button>
+        <script>
+            //改变html样式（文本颜色）
+            function newFunction()
+            {
+                document.getElementById('title').style.color='#ff0000'
+            }
+        </script>
+        <p>第二段</p>
+        <button type="button" onclick="newFunction()">点击</button>
+        <h2>第二个标题</h2>
+        <p>第三个段落</p>
+        <input id="num" type="text">
+        <script>
+            // 验证输入（未按邀请输入弹窗提示）
+            function testA()
+            {
+                var x=document.getElementById('num').value;
+                if(x==""||isNaN(x))
+                {
+                    alert("不是数字")
+                }
+                else
+                {
+                    document.write('aabbcc')
+                }
+            }
+        </script>
+        <button type="button" onclick="testA()">点这里</button>
+    </body>
+</html>
