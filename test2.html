@@ -1,27 +1,27 @@
+<!-- 写入到浏览器控制台console.log() -->
+<!-- 换行失败 -->
+<!-- javascript注释//或/* */ -->
 <!DOCTYPE html>
 <html>
-<head> 
-<meta charset="utf-8"> 
-<title>菜鸟教程(runoob.com)</title> 
-</head>
-<body>
-	
-<script>
-function changeImage()
-{
-	element=document.getElementById('myimage')
-	if (element.src.match("bulbon"))
-	{
-		element.src="/images/pic_bulboff.gif";
-	}
-	else
-	{
-		element.src="/images/pic_bulbon.gif";
-	}
-}
-</script>
-<img id="myimage" onclick="changeImage()" src="/images/pic_bulboff.gif" width="100" height="180">
-<p>点击灯泡就可以打开或关闭这盏灯</p>
-	
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title>test1</title>
+    </head>
+    <body>
+        <h1>这是标题</h1>
+        <p id="1">这是段落一</p>
+        <p id="2">这是段落二</p>
+        <script>
+            document.getElementById("1").innerHTML="he \ llo";
+            document.getElementById("2").innerHTML="world";
+        </script>
+        <script>
+            {
+                var a=5;
+                var b=6;
+                var c=a+b;
+                console.log(c);
+            }
+        </script>
+    </body>
 </html>
