@@ -1,0 +1,71 @@
+<!-- prompt -->
+<!-- ||==or -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>test1</title>
+        <script>
+            var randomloc=Math.floor(Math.random()*5)
+            var location1=randomloc; //存储战舰占据的位
+            var location2=location1+1;  //存储战舰占据的位置            
+            var location3=location2+1;  //存储战舰占据的位置
+            var guess;  //存储用户猜测的变量
+            var hits=0;  //存储击中次数的变量
+            var guesses=0; //存储猜测次数的变量
+            var isSunk=false; //战舰被击沉
+
+
+            while (isSunk==false){
+                guess=prompt("ready aim fire(enter a number 0-6):") //还未学习
+
+                if (guess<0 || guess>6){
+                    alert("please enter a valid cell number");
+                }else{
+                    guesses=guesses+1
+                    if (guess==location1 || guess==location2 || guess==location3){
+                        alert("HIT!")
+                        hits=hits+1
+                    if (hits==3){
+                        isSunk=true
+                        alert("you sank my battleship!")
+                    }
+                    }else{
+                        alert("MISS")
+                    }
+                }
+            }
+            var stats="you took"+guesses+"guesses to sink the battleship"+"which means your shooting accurary was"+(3/guesses);
+                alert(stats)
+            
+            //     while (isSunk==false){
+            //     guess=
+            //     if (hitss==3){
+            //         isSunk=true
+            //         alert("you sank my battleship!")
+            //     }
+            //     var stats="you took"+guesses+""
+            //     if (guess!=location1){
+            //         alert("请输入有效的数字")
+            //         guesses=guesses+1
+            //     }
+            //     else{
+            //         hitss=hitss+1
+                    
+            //     }
+            //     while (hitss=3){
+            //         var isSunk=true
+            //         document.write("you sank my battleship!")
+            //         document.write("次数是"+guesses)
+            //     }
+            // }
+            
+
+        </script>
+    </head>
+    <body>
+        <h1>游戏启动</h1>
+        <p><input>开始</p>
+
+    </body>
+</html>
