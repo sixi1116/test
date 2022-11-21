@@ -3,14 +3,33 @@
     <head>
         <meta charset="utf-8">
         <title>test1</title>
-
+        <style>
+            .redtext{color: rgb(70, 198, 143);} /*将元素的特性class设置为redtext时，其文本将变色*/
+        </style>
+        <script>
+            function init(){
+                //getElementById找到并返回元素
+                var plant=document.getElementById("greenplant")//getElementById可能返回null
+                plant.innerHTML="red alert:hit by phaser fire";
+                plant.setAttribute("class","redtext"); //setAttribute为元素添加新的特性
+                document.getElementById("blueplant").setAttribute("class","redtext")
+                // var scoop=document.getElementById("greenplant")
+                // var altText=scoop.getAttribute("class") //getAttribute获取元素特定的值，结果可能返回null
+                // if (altText==null){
+                //     console.log("null")
+                // }else{
+                //     console.log("value")
+                // }
+            }
+            window.onload=init//能够指定在网页加载完成后将要执行的代码
+        </script>
     </head>
     <body>
         <h1>titie</h1>
         <p id="greenplant">all is well</p>
         <p id="redplant">nothing to report</p>
         <p id="blueplant">all systens A-OK</p>
-        <script src="2022-11-21.js">
-        </script>
+        <!-- <script src="2022-11-21.js"> -->
+        <!-- </script> -->
     </body>
 </html>
