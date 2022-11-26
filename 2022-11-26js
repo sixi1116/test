@@ -1,0 +1,83 @@
+var numberArray=[60,50,62,58,54,54];
+function compareNumbers(num1,num2){
+    if (num1>num2){
+        return 1;
+    }
+    else if (num1===num2){
+        return 0;
+    }
+    else{
+        return -1;
+    }
+}
+numberArray.sort(compareNumbers);
+console.log(numberArray)
+
+
+
+
+
+// var passengers=[
+//     {name:"jone",paid:true,ticket:"coach"},
+//     {name:"Evel",paid:true,ticket:"firstclass"},
+//     {name:"Sun",paid:false,ticket:"firstclass"},
+//     {name:"john",paid:true,ticket:"test"}
+// ]
+
+// function serveCustomer(passenger){
+//         //让乘客点饮料
+//         var getDrinkOrderFunction=createDrinkCustome(passenger);
+//         getDrinkOrderFunction();
+//         //让乘客点餐
+//         var getDinnerOrderFunction=createDinnerCustome(passenger);
+//         getDinnerOrderFunction();
+//         //清理垃圾
+// }
+
+// function createDinnerCustome(passenger){
+//     var orderFunction;
+//     if (passenger.ticket==="firstclass"){
+//         orderFunction=function(){
+//             console.log("鸡肉或意大利面");
+//         }
+//      } else if(passenger.ticket==="coach"){
+//         orderFunction=function(){
+//             console.log("花生饼或椒盐脆饼")
+//         }
+//         }else{
+//             orderFunction=function(){
+//             console.log("快餐或芝士拼盘")
+//         }
+//         }
+//     return orderFunction
+// }
+
+// function createDrinkCustome(passenger){
+//     var orderFunction;
+//     if (passenger.ticket==="firstclass"){
+//         orderFunction=function(){
+//         console.log("would you like a cocktail or wine");
+//     }
+//     }else if (passenger.ticket==="coach"){
+//         orderFunction=function(){
+//         console.log("your choice is cola or water")
+//         }
+//     }else{
+//         orderFunction=function(){
+//         console.log("your choice is test")
+//         }
+//     }
+//     return orderFunction
+
+// }
+
+
+// function servePassengers(passengers){
+//     for (var i=0;i<passengers.length;i++){
+//         serveCustomer(passengers[i])
+//     }
+// }
+// servePassengers(passengers);
+
+
+

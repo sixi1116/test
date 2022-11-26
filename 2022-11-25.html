@@ -1,0 +1,30 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>test</title>
+        <script>
+            function resize(){
+                var element=document.getElementById("display");
+                element.innerHTML=element.innerHTML+" that";
+            }
+        </script>
+    </head>
+    <body>
+        <p id="display">
+            today is an other day
+        </p>
+        <script>
+            // window.onload=resize;
+            window.onresize=resize
+        </script>
+    </body>
+</html>
