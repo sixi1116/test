@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<h1>JavaScript 验证输入</h1>
+<p>请输入 0 到 10 之间的数字：</p>
+<input id="numb">
+<button type="button" onclick="myFunction()">提交</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+    let xString = numb.trim();
+    if (xString) {
+        let xNumber = Number(xString);
+        if (isNaN(xNumber) || xNumber < 0 || xNumber > 10) {
+            return "输入错误" + xString;
+        } else {
+            return "输入正确" + xString;
+        }
+    } else {
+        return "错误";
+    }; 
+    var numb = document.getElementById("numb").value;
+    document.getElementById("demo").style.ground
+    // document.getElementById("demo").innerHTML = text
+}
+</script>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+
+<h1>JavaScript 验证输入</h1>
+
+<p>请输入 0 到 10 之间的数字：</p>
+
+<input id="numb">
+
+<button type="button" onclick="myFunction()">提交</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    x = document.getElementById("numb").value.trim();
+ if(x){
+    if (isNaN(x) || x < 0 || x > 10) {
+        alert("输入错误"+x);
+    } else{
+        alert ("输入正确"+x);
+    }}else{alert("错误")};
+    document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html> -->

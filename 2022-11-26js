@@ -1,17 +1,72 @@
-var numberArray=[60,50,62,58,54,54];
-function compareNumbers(num1,num2){
-    if (num1>num2){
+var products = [
+    //名称，卡路里，颜色，销售
+    {name:"Grapfruit",colories:170,color:"red",sold:8200},
+    {name:"Orange",colories:160,color:"orange",sold:12101},
+    {name:"Cola",colories:210,color:"caramel",sold:25412},
+    {name:"Diet Cola",colories:0,color:"caramel",sold:43922},
+    {name:"Lemon",colories:200,color:"clear",sold:14983},
+    {name:"Reapberry",colories:180,color:"pink",sold:9427},
+    {name:"Root Beer",colories:200,color:"caramel",sold:9009},
+    {name:"Water",colories:0,color:"clear",sold:62123}
+]
+
+function compareName(colaA,colaB){
+    if (colaA.name>colaB.name){
         return 1;
-    }
-    else if (num1===num2){
+    }else if (colaA.name===colaB.name){
         return 0;
-    }
-    else{
+    }else{
         return -1;
     }
 }
-numberArray.sort(compareNumbers);
-console.log(numberArray)
+//products.sort(compareName)先按照产品sort重新排序
+products.sort(compareName)
+// console.log(products.sort(compareName))
+function printproductsname(){
+    for (var i=0;i<products.length;i++){
+        console.log("name:"+products[i].name+",colories:"+products[i].colories+",color:"+products[i].color+",sold:"+products[i].sold)
+    }
+}
+//之后遍历元素的时候才会按照排序来
+printproductsname(products)
+
+function compareSold(colaA,colaB){
+    if (colaA.sold<colaB.sold){
+        return 1;
+    }else if (colaA.sold===colaB.sold) {
+        return 0;
+    }else{
+        return -1;
+    }
+}
+// console.log(products.sort(compareSold))
+function printproductssold(){
+    for (var i=0;i<products.length;i++){
+    console.log("name:"+products[i].name+",colories:"+products[i].colories+",color:"+products[i].color+",sold:"+products[i].sold)
+}
+}
+// printproductssold(products)
+
+
+
+
+
+
+
+// var numberArray=[60,50,62,58,54,54];
+// function compareNumbers(num1,num2){
+//     if (num1>num2){
+//         return 1;
+//     }
+//     else if (num1===num2){
+//         return 0;
+//     }
+//     else{
+//         return -1;
+//     }
+// }
+// numberArray.sort(compareNumbers);
+// console.log(numberArray)
 
 
 
