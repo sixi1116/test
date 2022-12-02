@@ -1,0 +1,31 @@
+ /* 标签元素直接用标签名 */
+ /* id选择用#id */
+/* 类class选择器.class */
+/* 属性选择用img[src] */
+/* 伪（pseudo）类选择器，特定状态下的特定元素（比如鼠标指针悬停），a:haver，仅在鼠标指针悬停上时选择<a> */
+ p ,ol {
+    color: rgb(123, 41, 194);
+    /* text-shadow: 3px;这个好像没效果 */
+ }
+#smalltitle{
+    color: aqua;
+}
+.li{
+    background-color: coral;
+    text-align: center;
+}
+html{
+    font-size: 10px;
+    background-color: rgb(197, 170, 160);
+}
+#para2{
+    width: 600px;
+    margin: 0 auto;
+    background-color: #ff9500;
+    padding: 0 20px 20px 20px;
+    border: 5px solid black;
+}
+img{
+    display: block;
+    margin: 0 auto;
+}
