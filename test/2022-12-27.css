@@ -1,0 +1,12 @@
+#imgs>img {
+    height: 100px;
+    width: 120px;
+    opacity: 0.5;
+}
+
+#img {
+    border: 2px solid rgb(248, 247, 246);
+
+    height: 600px;
+    width: 960px;
+}

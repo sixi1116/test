@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Random color example — event handler property</title>
+    <style>
+      button {
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Change color</button>
+    <script>
+      const btn = document.querySelector('button');
+
+      function random(number) {
+        return Math.floor(Math.random()*number);
+      }
+
+      function bgChange() {
+        const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        document.body.style.backgroundColor = rndCol;
+      }
+
+      btn.ondblclick = bgChange;
+    </script>
+  </body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Random canvas circles</title>
+    <style>
+      html {
+        width: 100%;
+        height: inherit;
+      }
+
+      canvas {
+        display: block;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      button {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+
+  <button>Update</button>
+
+  <canvas></canvas>
+
+
+    <script>
+    const btn = document.querySelector('button');
+    const canvas = document.querySelector('canvas');
+    const ctx = canvas.getContext('2d');
+
+    let WIDTH = document.documentElement.clientWidth;
+    let HEIGHT = document.documentElement.clientHeight;
+
+    canvas.width = WIDTH;
+    canvas.height = HEIGHT;
+
+    function random(number) {
+      return Math.floor(Math.random()*number);
+    }
+
+    function draw() {
+      ctx.clearRect(0,0,WIDTH,HEIGHT);
+      for(let i = 0; i < 100; i++) {
+        ctx.beginPath();
+        ctx.fillStyle = 'rgba(255,0,0,0.5)';
+        ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+        ctx.fill();
+      }
+    }
+
+    btn.addEventListener('click',draw);
+
+    </script>
+
+  </body>
+</html> -->
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Function scope example</title>
+  </head>
+<body>
+
+  <script>
+    const x = 1;
+
+    function a() {
+      const y = 2;
+      output(y)
+    }
+
+    function b() {
+      const z = 3;
+      output(z)
+    }
+
+    function output(value) {
+      const para = document.createElement('p');
+      document.body.appendChild(para);
+      para.textContent = `Value: ${value}`;
+    }
+  </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Function start</title>
+    <style>
+      .msgBox {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 242px;
+        background: #eee;
+      }
+
+      .msgBox p {
+        line-height: 1.5;
+        padding: 10px 20px;
+        color: #333;
+        padding-left: 82px;
+        background-position: 25px center;
+        background-repeat: no-repeat;
+      }
+
+      .msgBox button {
+        background: none;
+        border: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 1.1rem;
+        color: #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Display message box</button>
+
+    <script>
+      function displayMessage(msgText, msgType) {
+        //使用了一个 DOM（文档对象模型）的内置方法 document.querySelector() 来选择<html> 元素并且把它存放在一个叫 html的常量中，这样方便我们接下来使用这个元素
+        const html = document.querySelector("html");
+
+        //使用了另一个名字叫做 Document.createElement() 的 DOM 方法，用来创建 <div> 元素并且把该新建元素的引用（实际上是新建对象的地址）放在一个叫做 panel的常量中。这个元素将成为我们的消息框的外部容器。
+        const panel = document.createElement("div");
+        //setAttribute
+        panel.setAttribute("class", "msgBox");
+        //使用了一个叫做 Node.appendChild() 的 DOM 方法，给 html 常量（我们之前定义好的）追加了我们设置好样式的 panel 元素
+        html.appendChild(panel);
+
+        //方法createElement()和appendChild() — 创建了一个 <p> 元素和一个<button>元素 — 并且把他们追加到了 panel<div>之下
+        const msg = document.createElement("p");
+        //使用元素的 Node.textContent（Node 泛指一个元素并不是说是某个元素是叫 Node）属性— 表示一个元素的文本属性 — 给一个 p 元素赋值
+        msg.textContent = msgText;
+        panel.appendChild(msg);
+
+        //，同样按钮也有这个属性，该属性就是按钮显示的‘X’。这个按钮的功能就是关闭消息提示框。
+        const closeBtn = document.createElement("button");
+        closeBtn.textContent = "x";
+        panel.appendChild(closeBtn);
+
+        //使用一个叫做 GlobalEventHandlers.onclick 的事件句柄给按钮添加了一个点击事件，点击事件后定义了一个匿名函数，功能是将消息提示框从父容器中删除 — 达到了关闭的效果。
+        closeBtn.onclick = function () {
+          //使用了 Node.removeChild() DOM 方法指定了我们想要移除的 HTML 的子元素 — 在这里指 panel<div>.
+          panel.parentNode.removeChild(panel);
+        };
+        if (msgType === "warning") {
+          msg.style.backgroundImage = "url(warning.png)";
+          panel.style.backgroundColor = "red";
+        } else if (msgType === "chat") {
+          msg.style.backgroundImage = "url(chat.png)";
+          panel.style.backgroundColor = "aqua";
+        } else {
+          msg.style.paddingLeft = "20px";
+        }
+      }
+
+    //   const btn = document.querySelector("button");
+      displayMessage(
+        "Your inbox is almost full — delete some mails", "warning" );
+    //   displayMessage("Brian: Hi there, how are you today?", "chat");
+    //   btn.onclick = function () {
+    //     displayMessage(
+    //     "Your inbox is almost full — delete some mails", "warning" );
+    //     displayMessage("Brian: Hi there, how are you today?", "chat");
+    //   };
+    </script>
+  </body>
+</html> -->

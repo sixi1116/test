@@ -1,0 +1,42 @@
+#div1 {
+    background-color: bisque;
+    /* padding: 15px; */
+    text-align: center;
+    font-size: large;
+    border: 1px solid rgb(15, 15, 14);
+    border-radius: 1em;
+}
+li {
+    padding-top: 5px;
+}
+#table1 th{
+    padding-left: 30px;
+}
+#div3{
+    border: 2px solid  cornflowerblue ;
+    border-radius: 1em;
+    padding: 10px 10px;
+    width: 30%;
+}
+#div3 th,#div3 td,#div3 tr {
+    border:1px solid black;
+    border-collapse: collapse;
+}
+
+#div4{
+    border-top: 10px;
+    border: 2px solid rgb(206, 206, 13);
+    padding: 10px 10px;
+    width: 30%;
+}
+#div4 td{
+    border: 1px solid rgb(12, 12, 12);
+    border-collapse: collapse;
+    width: 50px;
+    height: 50px;
+
+}
+
+.hit{
+    background-color: rgb(241, 241, 141);
+}

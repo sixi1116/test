@@ -1,0 +1,21 @@
+a{
+    background-color: aqua;
+    border: 2px dotted royalblue;
+}
+table,tr,th,td{
+    border-collapse: collapse;
+    border: 1px solid green;
+
+}
+/* ul{
+    list-style-type: square;
+} */
+
+#today{
+    background-color: aqua;
+    border: 2px solid rgb(2, 121, 139,0.5);
+    height: 100px;
+    width: 200px;
+    text-align: center;
+    border-radius: 40px;
+}

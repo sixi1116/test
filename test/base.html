@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>base</title>
+    <script src="base.js" async></script>
+    <link href="base.css" type="text/css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <h1 id="h1">Game</h1>
+    <p id="para1"></p>
+    <p id="para2"></p>
+
+    <button id="button1"></button>
+    <p id="para3">hello world</p>
+    <button id="button2">按钮</button>
+    <p id="para4"></p>
+    <table>
+      <tr>
+        <td id="00">1</td>
+        <td id="01">2</td>
+      </tr>
+      <tr>
+        <td id="10">3</td>
+        <td id="11">4</td>
+      </tr>
+    </table>
+    <form action="/" method="post">
+      <ul>
+        <li>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="user_name"/>
+        </li>
+        <li>
+          <label for="mail">E-mail:</label>
+          <input type="email" id="mail" name="use_email" />
+        </li>
+        <li>
+          <label for="msg">Message:</label>
+          <textarea id="msg" name="use_message"></textarea>
+        </li>
+        <li class="button">
+            <button type="submit">Send Your message</button>
+
+        </li>
+      </ul>
+    </form>
+    <form>
+        <fieldset>
+          <legend>Fruit juice size</legend>
+          <p>
+            <input type="radio" name="size" id="size_1" value="small">
+            <label for="size_1">Small</label>
+          </p>
+          <p>
+            <input type="radio" name="size" id="size_2" value="medium">
+            <label for="size_2">Medium</label>
+          </p>
+          <p>
+            <input type="radio" name="size" id="size_3" value="large">
+            <label for="size_3">Large</label>
+          </p>
+        </fieldset>
+      </form>
+      <form>
+        <h1>Payment form</h1>
+        <p>Required fields are followed by *</p>
+        <h2>Contact information</h2>
+        <fieldset>
+            <legend>title</legend>
+            <select id="card" name="usercard">
+                <option value="ace">Ace</option>
+                <option value="king">King</option>
+                <option value="queen">Queen</option>
+            </select>
+        </fieldset>
+<ul>
+    <li>
+        <label>Name:</label>
+       <input>
+    </li>
+    <li>
+        <label>Email:</label>
+        <input> 
+    </li>
+    <li>
+        <label>Password</label>
+        <input> 
+    </li>
+</ul>
+<h2>Payment information</h2>
+<select id="card" name="usercard">
+    <option value="Visa">Visa</option>
+    <option value="Maetercard">Maetercard</option>
+    <option value="American Express">American Express</option>
+</select>
+      </form>
+  </body>
+</html>

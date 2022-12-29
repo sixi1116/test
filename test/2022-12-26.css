@@ -1,0 +1,30 @@
+td{
+    border: 2px solid rgb(44, 42, 42);
+    height: 80px;
+    width: 80px;
+    text-align: center;
+}
+table{
+    border-collapse: collapse;
+}
+#input1,#button1{
+    background-color: rgb(165, 236, 212);
+}
+
+#input1{
+    width: 150px;
+    height: 35px;
+    border: 2px solid green;
+    border-radius: 10px;
+}
+#button1{
+    width: 50px;
+    height: 35px;
+    border: 2px solid green;
+    border-radius: 10px;
+}
+div{
+    height:45px ;
+    width: 200px;
+    display: inline;
+}
