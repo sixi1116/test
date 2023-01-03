@@ -35,4 +35,3 @@ for (let i = 0; i < element2.length; i++) {
 // for(let i=0;i<hit.length;i++){
 //     console.log(hit[i])
 // }
-

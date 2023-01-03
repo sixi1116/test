@@ -1,0 +1,17 @@
+ul{
+    list-style-type: none;
+}
+#div1{
+    height: 400px;
+    width: 400px;
+    background-color: rgb(147, 198, 181);
+
+    position: relative;
+    /* border: 1px solid wheat; */
+}
+#div2{
+    height: 40px;
+    width: 40px;
+    background-color: rgb(246, 165, 235);
+    position: absolute;
+}

@@ -1,0 +1,29 @@
+#test{
+  list-style-type: none;
+}
+label {
+  min-width: 50px;
+  display: inline-block;
+}
+
+#submit {
+  margin-left: 182px;
+  margin-top: 10px;
+  background-color: rgb(155, 232, 232);
+}
+table{
+  border-collapse: collapse;
+  margin-top: 10px;
+  height: 20px;
+  width: 200px;
+}
+td,th{
+  border: 2px solid rosybrown;
+  text-align: center;
+}
+#button{
+  margin-top: 10px;
+}
+ol{
+  list-style-type: decimal;
+}

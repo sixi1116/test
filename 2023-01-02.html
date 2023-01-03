@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>数据整理</title>
+    <script src="script文件夹\2023-01-02.js" async></script>
+    <link href="styles文件夹\2023-01-02.css" rel="stylesheet" />
+  </head>
+  <body>
+    <form>
+      <ul id="test">
+        <li>
+          <label for="name"> 姓名: </label>
+          <input type="text" id="name" required />
+        </li>
+        <li>
+          <label for="compensation"> 薪资： </label>
+          <input type="number" id="compensation" required />
+        </li>
+        <li>
+          <label for="age"> 年龄： </label>
+          <input type="number" id="age" />
+        </li>
+        <input type="button" value="提交" id="submit" />
+        <input type="reset" id="reset">
+      </ul>
+    </form>
+    <div>
+      <table id="table">
+        <tr>
+          <th>姓名</th>
+          <th>薪资</th>
+          <th>年龄</th>
+        </tr>
+      </table>
+    </div>
+    <button id="button">更新数据</button>
+    <div id="data">
+      <p id="para1">薪资大于(等于)2w:</p>
+      <ol id="para1list">
+        <li>1</li>
+      </ol>
+      <p id="para2">薪资小于2w:</p>
+      <ol id="para2list">
+        <li>2</li>
+      </ol>
+    </div>
+  </body>
+</html>
